@@ -7,7 +7,6 @@ body {
     justify-content: center;
     flex-direction: column;
     font-size: 2rem;
-    flex: 1;
     font-family: arial;
 }
 
@@ -22,7 +21,7 @@ body {
     padding: 2rem;
     box-shadow:
         0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 0 3px #c3c3c3,
         inset 0 0 10px black,
         0 0 10px rgba(0,0,0,0.2);
 }
@@ -43,14 +42,15 @@ h1 {
 }
 
 .mid {
-    background-color: black;
+    background-color: rgb(39, 39, 39);
+    box-shadow: rgb(9, 9, 9) 0 3px 0, rgba(0, 0, 0, 0.484) 0 3px 8px;
     position: absolute;
     z-index: 1;
-    top: 48%;
-    right: 47%;
+    top: 48.5%;
+    right: 47.5%;
     border-radius: 50%;
-    width: 4%;
-    height: 4%;
+    width: 5.5%;
+    height: 4.5%;
 }
 
 .hand {
@@ -63,7 +63,8 @@ h1 {
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    box-shadow: rgba(0, 0, 0, 0.499) 0 0 3px;
+    box-shadow: rgba(0, 0, 0, 0.499) 0 2px 3px;
+    border-radius: 35% 35% 100% 100%;
 }
 
 .hour {
@@ -71,8 +72,48 @@ h1 {
     right: 50%;
     height: 12px;
     background-color: rgb(68, 68, 68);
+    
 }
 
 .sec {
     background-color: red;
+}
+
+.num {
+    font-size: 1.4em;
+    position: absolute;
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: rgb(185, 185, 185) 0 2px 0, rgba(0, 0, 0, 0.631) 0 2px 8px;
+    z-index: -1;
+}
+
+.top {
+    right:45%;
+    bottom:84%;
+}
+
+.bottom {
+    right: 48%;
+    top: 85%;
+}
+
+.right {
+    left:97%;
+    top:36%;
+}
+
+.left {
+    top:36%;
+    right:97%;
+}
+
+@media (max-width: 500px) {
+    body {
+        height: 155.6vh;
+    }
+    h1 {
+        width: .9em;
+        transform: scale(1.2);
+    }
 }
